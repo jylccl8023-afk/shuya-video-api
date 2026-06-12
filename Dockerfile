@@ -20,4 +20,4 @@ ENV STATIC_BASE_URL=http://localhost:8000/videos
 EXPOSE 8000
 
 # 兼容 Railway 动态端口和 VPS 固定端口
-CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
